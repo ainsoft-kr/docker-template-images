@@ -41,7 +41,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/ainsoft/templates/base:latest
+          tags: ghcr.io/${{ github.repository }}/templates/base:latest
           context: ./_base_images/base
 
   build:
@@ -78,7 +78,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/ainsoft/templates/${{ matrix.template }}:latest
+          tags: ghcr.io/${{ github.repository }}/templates/${{ matrix.template }}:latest
           context: ./_base_images/${{ matrix.template }}
 
       # 중간에 실패한 경우 슬랙으로 알려줍니다.
@@ -147,7 +147,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/ainsoft/templates/${{ matrix.template }}
+          images: ghcr.io/${{ github.repository }}/templates/${{ matrix.template }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to GitHub Container Registry
@@ -181,7 +181,7 @@ jobs:
         shell: bash
         run: |
           version="${GITHUB_REF/refs\/tags\//}"
-          image=ghcr.io/ainsoft/templates/${{ matrix.template }}:$version
+          image=ghcr.io/${{ github.repository }}/templates/${{ matrix.template }}:$version
           thumbnail="https://ainsoft-templates-thumbnails.s3-us-west-2.amazonaws.com/${{ matrix.template }}.png?v=$version"
           jsonToPost=`jq -Sc ".image = "\""$image"\"" | .thumbnail="\""$thumbnail"\""" ${{ matrix.template }}/template.json`
 

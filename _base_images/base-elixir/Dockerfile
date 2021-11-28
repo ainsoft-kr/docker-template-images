@@ -1,4 +1,4 @@
-FROM ghcr.io/ainsoft-kr/templates/base
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base
 
 ARG DEBIAN_FRONTEND=noninteractive
 

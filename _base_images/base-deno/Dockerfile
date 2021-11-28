@@ -1,4 +1,4 @@
-FROM ghcr.io/ainsoft/templates/base
+FROM ghcr.io/ainsoft-kr/templates/base
 
 USER ainsoft
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh

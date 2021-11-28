@@ -1,4 +1,4 @@
-FROM ghcr.io/ainsoft/templates/base
+FROM ghcr.io/ainsoft-kr/templates/base
 
 USER root
 

@@ -83,15 +83,15 @@ jobs:
 
       # 중간에 실패한 경우 슬랙으로 알려줍니다.
       # GitHub 저장소나 조직의 Secrets 항목에 슬랙 Webhook URL을 등록해야 합니다.
-      - name: Notify failure
-        uses: 8398a7/action-slack@v3
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        with:
-          status: ${{ job.status }}
-          username: github-actions
-          channel: '#github'
-        if: failure()  
+      # - name: Notify failure
+      #   uses: 8398a7/action-slack@v3
+      #   env:
+      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      #   with:
+      #     status: ${{ job.status }}
+      #     username: github-actions
+      #     channel: '#github'
+      #   if: failure()  
 
   build-starter-template-images:
     name: Templates

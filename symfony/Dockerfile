@@ -1,4 +1,4 @@
-FROM ghcr.io/anyfiddle/templates/base-php
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-php
 
 USER root
 RUN apt-get update && apt-get install -y \
@@ -22,4 +22,4 @@ RUN symfony new ./ --full --no-git \
     && sed -i "/^DATABASE_URL/s/^/# /g" .env \ 
     && sed -i "/^# DATABASE_URL=\"sqlite/s//DATABASE_URL=\"sqlite/g" .env
 
-COPY --chown=anyfiddle ./workspace /home/anyfiddle/project
+COPY --chown=ainsoft ./workspace /home/ainsoft/project

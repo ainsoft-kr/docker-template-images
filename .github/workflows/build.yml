@@ -93,7 +93,7 @@ jobs:
       #     channel: '#github'
       #   if: failure()  
 
-  build-starter-template-images:
+  build-docker-template-images:
     name: Templates
     needs: build
     runs-on: ubuntu-latest

@@ -1,5 +1,5 @@
-FROM ghcr.io/anyfiddle/templates/base-csharp
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-csharp
 
 RUN dotnet new console -o .
 
-COPY --chown=anyfiddle ./workspace/anyfiddle.json /home/anyfiddle/project/anyfiddle.json
+COPY --chown=ainsoft ./workspace/anyfiddle.json /home/ainsoft/project/anyfiddle.json

@@ -1,4 +1,4 @@
-FROM ghcr.io/anyfiddle/templates/base-nodejs
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-nodejs
 
 USER root
 
@@ -43,5 +43,5 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 USER anyfiddle
-COPY --chown=anyfiddle ./workspace /home/anyfiddle/project
+COPY --chown=ainsoft ./workspace /home/ainsoft/project
 RUN npm install

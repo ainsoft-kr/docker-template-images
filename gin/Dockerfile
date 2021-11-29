@@ -1,4 +1,4 @@
-FROM ghcr.io/anyfiddle/templates/base-golang
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-golang
 
 RUN go mod init project && go get -u github.com/gin-gonic/gin
-COPY --chown=anyfiddle ./workspace /home/anyfiddle/project
+COPY --chown=ainsoft ./workspace /home/ainsoft/project

@@ -1,8 +1,8 @@
-FROM ghcr.io/anyfiddle/templates/base-nodejs
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-nodejs
 
 RUN cd .. \
     && npm init vite@latest project --template react \
     && cd project \
     && npm install
-COPY --chown=anyfiddle ./workspace/anyfiddle.json /home/anyfiddle/project/anyfiddle.json
-COPY --chown=anyfiddle ./workspace/vite.config.js /home/anyfiddle/project/vite.config.js
+COPY --chown=ainsoft ./workspace/anyfiddle.json /home/ainsoft/project/anyfiddle.json
+COPY --chown=ainsoft ./workspace/vite.config.js /home/ainsoft/project/vite.config.js

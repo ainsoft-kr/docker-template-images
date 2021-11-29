@@ -1,4 +1,4 @@
-FROM ghcr.io/anyfiddle/templates/base-ruby
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-ruby
 
 USER root
 
@@ -24,5 +24,5 @@ USER anyfiddle
 
 RUN rails new .
 
-COPY --chown=anyfiddle ./workspace/anyfiddle.json /home/anyfiddle/project/anyfiddle.json
-COPY --chown=anyfiddle ./workspace/config/environments/development.rb /home/anyfiddle/project/config/environments/development.rb
+COPY --chown=ainsoft ./workspace/anyfiddle.json /home/ainsoft/project/anyfiddle.json
+COPY --chown=ainsoft ./workspace/config/environments/development.rb /home/ainsoft/project/config/environments/development.rb

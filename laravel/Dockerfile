@@ -1,4 +1,4 @@
-FROM ghcr.io/anyfiddle/templates/base-php
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-php
 
 USER root
 RUN apt-get update && apt-get install -y \
@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install -y \
 USER anyfiddle
 
 RUN composer create-project --prefer-dist laravel/laravel ./
-COPY --chown=anyfiddle ./workspace/anyfiddle.json /home/anyfiddle/project/anyfiddle.json
+COPY --chown=ainsoft ./workspace/anyfiddle.json /home/ainsoft/project/anyfiddle.json

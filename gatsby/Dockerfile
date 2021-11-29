@@ -1,4 +1,4 @@
-FROM ghcr.io/anyfiddle/templates/base-nodejs
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-nodejs
 
-RUN cd /home/anyfiddle && rm -rf project && npx gatsby new project
-COPY --chown=anyfiddle ./workspace/anyfiddle.json /home/anyfiddle/project/anyfiddle.json
+RUN cd /home/ainsoft && rm -rf project && npx gatsby new project
+COPY --chown=ainsoft ./workspace/anyfiddle.json /home/ainsoft/project/anyfiddle.json

@@ -1,1 +1,1 @@
-FROM ghcr.io/anyfiddle/templates/base
+FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base

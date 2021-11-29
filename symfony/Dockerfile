@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN wget https://get.symfony.com/cli/installer -O - | bash /dev/stdin --install-dir=/usr/bin
 
-USER anyfiddle
+USER ainsoft
 
 RUN symfony new ./ --full --no-git \
     && sed -i "/^DATABASE_URL/s/^/# /g" .env \ 

@@ -42,6 +42,6 @@ RUN apt-get update && apt-get install -y \
     xdg-utils \
     && rm -rf /var/lib/apt/lists/*
 
-USER anyfiddle
+USER ainsoft
 COPY --chown=ainsoft ./workspace /home/ainsoft/project
 RUN npm install

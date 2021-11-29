@@ -2,7 +2,7 @@ FROM ghcr.io/ainsoft-kr/docker-template-images/templates/base-ruby
 
 USER root
 RUN gem install bundler jekyll
-USER anyfiddle
+USER ainsoft
 
 RUN  cd /home/ainsoft && \
     rm -rf project && \

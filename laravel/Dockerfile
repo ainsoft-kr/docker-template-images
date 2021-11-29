@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     php-xml \
     && rm -rf /var/lib/apt/lists/*
 
-USER anyfiddle
+USER ainsoft
 
 RUN composer create-project --prefer-dist laravel/laravel ./
 COPY --chown=ainsoft ./workspace/anyfiddle.json /home/ainsoft/project/anyfiddle.json

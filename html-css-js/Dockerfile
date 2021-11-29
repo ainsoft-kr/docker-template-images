@@ -4,5 +4,5 @@ USER root
 
 RUN npm install -g serve
 
-USER anyfiddle
+USER ainsoft
 COPY --chown=ainsoft ./workspace /home/ainsoft/project
